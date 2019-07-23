@@ -2,7 +2,7 @@ node {
 
     checkout scm
 
-    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+    docker.withRegistry('https://registry.hub.docker.com', 'gcr:[dockerhub]') {
 
         def customImage = docker.build("anjubala/node-web-app")
 
